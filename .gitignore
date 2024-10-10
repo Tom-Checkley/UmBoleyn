@@ -128,3 +128,9 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# IDE generated items
+*.vs
+*.vscode
+*.sublime-project
+*.sublime-workspace
