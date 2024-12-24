@@ -1,3 +1,5 @@
 # Global ignore
+
+# IDE generated items
 .vs
 .vscode
