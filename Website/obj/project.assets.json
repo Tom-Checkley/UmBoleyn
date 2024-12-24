@@ -3296,7 +3296,7 @@
           "Microsoft.AspNetCore.App"
         ],
         "build": {
-          "build/_._": {}
+          "build/SixLabors.ImageSharp.Web.props": {}
         }
       },
       "SQLitePCLRaw.bundle_e_sqlite3/2.1.10": {
@@ -19464,6 +19464,7 @@
     "net9.0": [
       "Microsoft.ICU.ICU4C.Runtime >= 72.1.0.3",
       "SixLabors.ImageSharp >= 3.1.6",
+      "SixLabors.ImageSharp.Web >= 3.1.3",
       "Umbraco.Cms >= 15.1.1"
     ]
   },
@@ -19526,6 +19527,10 @@
           "SixLabors.ImageSharp": {
             "target": "Package",
             "version": "[3.1.6, )"
+          },
+          "SixLabors.ImageSharp.Web": {
+            "target": "Package",
+            "version": "[3.1.3, )"
           },
           "Umbraco.Cms": {
             "target": "Package",

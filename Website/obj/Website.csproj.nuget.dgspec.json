@@ -60,6 +60,10 @@
               "target": "Package",
               "version": "[3.1.6, )"
             },
+            "SixLabors.ImageSharp.Web": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
             "Umbraco.Cms": {
               "target": "Package",
               "version": "[15.1.1, )"
