@@ -1,0 +1,144 @@
+﻿/*@font-face {
+	font-family: baumans-regular;
+	src: url("Assets/Fonts/Baumans/Baumans-Regular.ttf")
+}
+
+@font-face {
+	font-family: nunito-sans;
+	src: url("Assets/Fonts//Nunito_Sans/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf")
+}*/
+
+@import url('https://fonts.googleapis.com/css2?family=Baumans&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+.baumans-regular {
+	font-family: "Baumans", serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.nunito-sans-regular {
+	font-family: "Nunito Sans", serif;
+	font-optical-sizing: auto;
+	font-weight: 300;
+	font-style: normal;
+	font-variation-settings: "wdth" 100, "YTLC" 500;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+	* + * {
+		margin-top: 1.5rem;
+	}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	font-size: 16px;
+	background-color: #222;
+	color: #fff;
+	font-family: baumans-regular;
+}
+
+main {
+	position: relative;
+	z-index: 10;
+	width: 100%;
+	min-height: 100%;
+	padding: 1.5rem;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+}
+
+header {
+	position: relative;
+}
+
+	header:before,
+	header:after {
+		content: '';
+		position: absolute;
+		width: 18rem;
+		height: 18rem;
+	}
+
+	header::before {
+		left: -1.5rem;
+		bottom: -3rem;
+		background-color: red;
+	}
+
+	header::after {
+		right: -3rem;
+		top: -3rem;
+		background-color: #0300e5;
+		border-radius: 50%;
+	}
+
+	header > * {
+		z-index: 10;
+	}
+
+h1 {
+	position: relative;
+	font-size: 3rem;
+	padding-left: 2.5rem;
+}
+
+	h1::before {
+		content: '';
+		position: absolute;
+		height: 110vh;
+		top: -50vh;
+		left: 0.5rem;
+		width: 8px;
+		background-color: #fff;
+	}
+
+p {
+	position: relative;
+	font-family: nunito-sans;
+	font-size: 1.5rem;
+	padding-bottom: 1rem;
+	padding-left: 2.5rem;
+}
+
+	p::after {
+		content: '';
+		position: absolute;
+		height: 8px;
+		width: 100vw;
+		left: -50%;
+		bottom: -1rem;
+		background-color: #fff;
+	}
+
+a {
+	color: inherit;
+	display: inline-block;
+	text-decoration: none;
+	/*font-weight: 800;*/
+}
+
+	a::after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 1px;
+		background-color: #fff;
+		transition: all linear 0.2s;
+		margin-left: auto;
+	}
+
+	a:hover::after,
+	a:focus::after {
+		width: 0;
+	}

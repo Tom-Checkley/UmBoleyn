@@ -41,6 +41,7 @@
           "SixLabors.ImageSharp": "3.1.6",
           "SixLabors.ImageSharp.Web": "3.1.3",
           "Umbraco.Cms": "15.1.1",
+          "uSync": "15.1.0",
           "Microsoft.AspNetCore.Antiforgery": "9.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "9.0.0.0",
           "Microsoft.AspNetCore.Authentication.BearerToken": "9.0.0.0",
@@ -48,14 +49,14 @@
           "Microsoft.AspNetCore.Authentication.Core": "9.0.0.0",
           "Microsoft.AspNetCore.Authentication": "9.0.0.0",
           "Microsoft.AspNetCore.Authentication.OAuth": "9.0.0.0",
-          "Microsoft.AspNetCore.Authorization": "9.0.0.0",
+          "Microsoft.AspNetCore.Authorization.Reference": "9.0.0.0",
           "Microsoft.AspNetCore.Authorization.Policy": "9.0.0.0",
           "Microsoft.AspNetCore.Components.Authorization": "9.0.0.0",
-          "Microsoft.AspNetCore.Components": "9.0.0.0",
+          "Microsoft.AspNetCore.Components.Reference": "9.0.0.0",
           "Microsoft.AspNetCore.Components.Endpoints": "9.0.0.0",
-          "Microsoft.AspNetCore.Components.Forms": "9.0.0.0",
+          "Microsoft.AspNetCore.Components.Forms.Reference": "9.0.0.0",
           "Microsoft.AspNetCore.Components.Server": "9.0.0.0",
-          "Microsoft.AspNetCore.Components.Web": "9.0.0.0",
+          "Microsoft.AspNetCore.Components.Web.Reference": "9.0.0.0",
           "Microsoft.AspNetCore.Connections.Abstractions": "9.0.0.0",
           "Microsoft.AspNetCore.CookiePolicy": "9.0.0.0",
           "Microsoft.AspNetCore.Cors": "9.0.0.0",
@@ -86,7 +87,7 @@
           "Microsoft.AspNetCore.Identity": "9.0.0.0",
           "Microsoft.AspNetCore.Localization": "9.0.0.0",
           "Microsoft.AspNetCore.Localization.Routing": "9.0.0.0",
-          "Microsoft.AspNetCore.Metadata": "9.0.0.0",
+          "Microsoft.AspNetCore.Metadata.Reference": "9.0.0.0",
           "Microsoft.AspNetCore.Mvc.Abstractions": "9.0.0.0",
           "Microsoft.AspNetCore.Mvc.ApiExplorer": "9.0.0.0",
           "Microsoft.AspNetCore.Mvc.Core": "9.0.0.0",
@@ -175,7 +176,7 @@
           "Microsoft.Extensions.Options.Reference": "9.0.0.0",
           "Microsoft.Extensions.Primitives.Reference": "9.0.0.0",
           "Microsoft.Extensions.WebEncoders": "9.0.0.0",
-          "Microsoft.JSInterop": "9.0.0.0",
+          "Microsoft.JSInterop.Reference": "9.0.0.0",
           "Microsoft.Net.Http.Headers.Reference": "9.0.0.0",
           "Microsoft.VisualBasic.Core": "14.0.0.0",
           "Microsoft.VisualBasic": "10.0.0.0",
@@ -813,6 +814,34 @@
           "lib/netstandard2.0/MessagePack.Annotations.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Authorization/9.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Metadata": "9.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.0",
+          "Microsoft.Extensions.Options": "9.0.0"
+        }
+      },
+      "Microsoft.AspNetCore.Components/9.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authorization": "9.0.0",
+          "Microsoft.AspNetCore.Components.Analyzers": "9.0.0"
+        }
+      },
+      "Microsoft.AspNetCore.Components.Analyzers/9.0.0": {},
+      "Microsoft.AspNetCore.Components.Forms/9.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "9.0.0"
+        }
+      },
+      "Microsoft.AspNetCore.Components.Web/9.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "9.0.0",
+          "Microsoft.AspNetCore.Components.Forms": "9.0.0",
+          "Microsoft.Extensions.DependencyInjection": "9.0.0",
+          "Microsoft.Extensions.Primitives": "9.0.0",
+          "Microsoft.JSInterop": "9.0.0"
+        }
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/9.0.0": {},
       "Microsoft.AspNetCore.Cryptography.KeyDerivation/9.0.0": {
         "dependencies": {
@@ -871,6 +900,7 @@
           "System.Security.Principal": "4.0.1"
         }
       },
+      "Microsoft.AspNetCore.Metadata/9.0.0": {},
       "Microsoft.AspNetCore.Mvc.Razor.Extensions/6.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Razor.Language": "6.0.0",
@@ -1851,6 +1881,7 @@
           "lib/net6.0/Microsoft.IO.RecyclableMemoryStream.dll": {}
         }
       },
+      "Microsoft.JSInterop/9.0.0": {},
       "Microsoft.Net.Http.Headers/9.0.0-rc.2.24474.3": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "9.0.0"
@@ -4034,6 +4065,98 @@
           "lib/net9.0/Umbraco.Web.Website.dll": {}
         }
       },
+      "uSync/15.1.0": {
+        "dependencies": {
+          "uSync.BackOffice": "15.1.0",
+          "uSync.BackOffice.Targets": "15.1.0",
+          "uSync.Backoffice.Management.Api": "15.1.0",
+          "uSync.Backoffice.Management.Client": "15.1.0"
+        },
+        "runtime": {
+          "lib/net9.0/uSync.dll": {
+            "assemblyVersion": "15.1.0.0",
+            "fileVersion": "15.1.0.0"
+          }
+        },
+        "compile": {
+          "lib/net9.0/uSync.dll": {}
+        }
+      },
+      "uSync.BackOffice/15.1.0": {
+        "dependencies": {
+          "uSync.Community.Contrib": "15.1.0",
+          "uSync.Core": "15.1.0"
+        },
+        "runtime": {
+          "lib/net9.0/uSync.BackOffice.dll": {
+            "assemblyVersion": "15.1.0.0",
+            "fileVersion": "15.1.0.0"
+          }
+        },
+        "compile": {
+          "lib/net9.0/uSync.BackOffice.dll": {}
+        }
+      },
+      "uSync.Backoffice.Management.Api/15.1.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "9.0.0",
+          "Umbraco.Cms.Api.Management": "15.1.1",
+          "uSync.BackOffice": "15.1.0"
+        },
+        "runtime": {
+          "lib/net9.0/uSync.Backoffice.Management.Api.dll": {
+            "assemblyVersion": "15.1.0.0",
+            "fileVersion": "15.1.0.0"
+          }
+        },
+        "compile": {
+          "lib/net9.0/uSync.Backoffice.Management.Api.dll": {}
+        }
+      },
+      "uSync.Backoffice.Management.Client/15.1.0": {
+        "dependencies": {
+          "Umbraco.Cms.Infrastructure": "15.1.1"
+        },
+        "runtime": {
+          "lib/net9.0/uSync.Backoffice.Management.Client.dll": {
+            "assemblyVersion": "15.1.0.0",
+            "fileVersion": "15.1.0.0"
+          }
+        },
+        "compile": {
+          "lib/net9.0/uSync.Backoffice.Management.Client.dll": {}
+        }
+      },
+      "uSync.BackOffice.Targets/15.1.0": {},
+      "uSync.Community.Contrib/15.1.0": {
+        "dependencies": {
+          "uSync.Core": "15.1.0"
+        },
+        "runtime": {
+          "lib/net9.0/uSync.Community.Contrib.dll": {
+            "assemblyVersion": "15.1.0.0",
+            "fileVersion": "15.1.0.0"
+          }
+        },
+        "compile": {
+          "lib/net9.0/uSync.Community.Contrib.dll": {}
+        }
+      },
+      "uSync.Core/15.1.0": {
+        "dependencies": {
+          "Umbraco.Cms.Api.Management": "15.1.1",
+          "Umbraco.Cms.Web.Website": "15.1.1"
+        },
+        "runtime": {
+          "lib/net9.0/uSync.Core.dll": {
+            "assemblyVersion": "15.1.0.0",
+            "fileVersion": "15.1.0.0"
+          }
+        },
+        "compile": {
+          "lib/net9.0/uSync.Core.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Antiforgery/9.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Antiforgery.dll": {}
@@ -4076,7 +4199,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Authorization/9.0.0.0": {
+      "Microsoft.AspNetCore.Authorization.Reference/9.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Authorization.dll": {}
         },
@@ -4094,7 +4217,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Components/9.0.0.0": {
+      "Microsoft.AspNetCore.Components.Reference/9.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Components.dll": {}
         },
@@ -4106,7 +4229,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Components.Forms/9.0.0.0": {
+      "Microsoft.AspNetCore.Components.Forms.Reference/9.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Components.Forms.dll": {}
         },
@@ -4118,7 +4241,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Components.Web/9.0.0.0": {
+      "Microsoft.AspNetCore.Components.Web.Reference/9.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Components.Web.dll": {}
         },
@@ -4304,7 +4427,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Metadata/9.0.0.0": {
+      "Microsoft.AspNetCore.Metadata.Reference/9.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Metadata.dll": {}
         },
@@ -4838,7 +4961,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.JSInterop/9.0.0.0": {
+      "Microsoft.JSInterop.Reference/9.0.0.0": {
         "compile": {
           "Microsoft.JSInterop.dll": {}
         },
@@ -6078,6 +6201,41 @@
       "path": "messagepack.annotations/2.5.192",
       "hashPath": "messagepack.annotations.2.5.192.nupkg.sha512"
     },
+    "Microsoft.AspNetCore.Authorization/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qDJlBC5pUQ/3o6/C6Vuo9CGKtV5TAe5AdKeHvDR2bgmw8vwPxsAy3KG5eU0i1C+iAUNbmq+iDTbiKt16f9pRiA==",
+      "path": "microsoft.aspnetcore.authorization/9.0.0",
+      "hashPath": "microsoft.aspnetcore.authorization.9.0.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Components/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xKzY0LRqWrwuPVzKIF9k1kC21NrLmIE2qPhhKlInEAdYqNe8qcMoPWZy7fo1uScHkz5g73nTqDDra3+aAV7mTQ==",
+      "path": "microsoft.aspnetcore.components/9.0.0",
+      "hashPath": "microsoft.aspnetcore.components.9.0.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Components.Analyzers/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-maOE1qlJ9hf1Fb7PhFLw9bgP9mWckuDOcn1uKNt9/msdJG2YHl3cPRHojYa6CxliGHIXL8Da4qPgeUc4CaOoeg==",
+      "path": "microsoft.aspnetcore.components.analyzers/9.0.0",
+      "hashPath": "microsoft.aspnetcore.components.analyzers.9.0.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Components.Forms/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-orHGxDkbAa9syuaLVtZWOhNC8IddnCsDqpFaKjBj4zxe+B8cd6kcNf/t4Lv5hWBQ7mODiRCzEfKBnpU+GCHvbw==",
+      "path": "microsoft.aspnetcore.components.forms/9.0.0",
+      "hashPath": "microsoft.aspnetcore.components.forms.9.0.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Components.Web/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZfJwwV05T+268cnJsO6yfi9oXYLe3ATRAEk0VZgBMptA5HVsduIsnFLjhNOYT7+I8NolxDEx1CEW8yKe5xTb6Q==",
+      "path": "microsoft.aspnetcore.components.web/9.0.0",
+      "hashPath": "microsoft.aspnetcore.components.web.9.0.0.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Cryptography.Internal/9.0.0": {
       "type": "package",
       "serviceable": true,
@@ -6133,6 +6291,13 @@
       "sha512": "sha512-9l/Y/CO3q8tET3w+dDiByREH8lRtpd14cMevwMV5nw2a/avJ5qcE3VVIE5U5hesec2phTT6udQEgwjHmdRRbig==",
       "path": "microsoft.aspnetcore.http.features/1.0.2",
       "hashPath": "microsoft.aspnetcore.http.features.1.0.2.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Metadata/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-X81C891nMuWgzNHyZ0C3s+blSDxRHzQHDFYQoOKtFvFuxGq3BbkLbc5CfiCqIzA/sWIfz6u8sGBgwntQwBJWBw==",
+      "path": "microsoft.aspnetcore.metadata/9.0.0",
+      "hashPath": "microsoft.aspnetcore.metadata.9.0.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Mvc.Razor.Extensions/6.0.0": {
       "type": "package",
@@ -6651,6 +6816,13 @@
       "sha512": "sha512-s/s20YTVY9r9TPfTrN5g8zPF1YhwxyqO6PxUkrYTGI2B+OGPe9AdajWZrLhFqXIvqIW23fnUE4+ztrUWNU1+9g==",
       "path": "microsoft.io.recyclablememorystream/3.0.1",
       "hashPath": "microsoft.io.recyclablememorystream.3.0.1.nupkg.sha512"
+    },
+    "Microsoft.JSInterop/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-efQKxKUPe8OuH0hRiYsvBJkhhPzIYFNcr9+3wanQ7Bch/wr1JWNd90GYiPLtkSHepE1zMEoaLkAxi5N5/eyC4Q==",
+      "path": "microsoft.jsinterop/9.0.0",
+      "hashPath": "microsoft.jsinterop.9.0.0.nupkg.sha512"
     },
     "Microsoft.Net.Http.Headers/9.0.0-rc.2.24474.3": {
       "type": "package",
@@ -7933,6 +8105,55 @@
       "path": "umbraco.cms.web.website/15.1.1",
       "hashPath": "umbraco.cms.web.website.15.1.1.nupkg.sha512"
     },
+    "uSync/15.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MnKnlRSf2KtBIeFMCPGqlpwwHNyxXUuagArkmyeX4KHGihh4hzsL/dxJ/8ZhtBFA5cfHrzx8b86NUF//G/SlXw==",
+      "path": "usync/15.1.0",
+      "hashPath": "usync.15.1.0.nupkg.sha512"
+    },
+    "uSync.BackOffice/15.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-THvhk2+LFbGy1DdBn6eCF0yt6HxuB1Ej53JU7JpH6e/HM2YoPCMaeATcHbe2hvTF6/fI6TriMC+//qw35PPjKg==",
+      "path": "usync.backoffice/15.1.0",
+      "hashPath": "usync.backoffice.15.1.0.nupkg.sha512"
+    },
+    "uSync.Backoffice.Management.Api/15.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5zrFBUntGwqQkhno/0R/CAv5H1AW7TgL6W6y+PuBSQMKjgNx/be3QdNSbH3+SRsDN7WBUSme+aSyODmnfvofpw==",
+      "path": "usync.backoffice.management.api/15.1.0",
+      "hashPath": "usync.backoffice.management.api.15.1.0.nupkg.sha512"
+    },
+    "uSync.Backoffice.Management.Client/15.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bbN95DLrjh7IOO5GjLnQsR+V6ivdOIlU9HLVEqxwIjL2Qmp0QkIT81wl60rTcP9Fo0RVEhGKf4B7A2zZMhPI7g==",
+      "path": "usync.backoffice.management.client/15.1.0",
+      "hashPath": "usync.backoffice.management.client.15.1.0.nupkg.sha512"
+    },
+    "uSync.BackOffice.Targets/15.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WTmj5/m9wjz8gN3EoNq4GtLGSiaV09LGBit2KiHy4k5nlJy7WOeHH49Jz2kpDU8vY4liw2FdeHGxD9/lnWHRVw==",
+      "path": "usync.backoffice.targets/15.1.0",
+      "hashPath": "usync.backoffice.targets.15.1.0.nupkg.sha512"
+    },
+    "uSync.Community.Contrib/15.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-H51Hh5/PsyWWbeD6d+++7We7ogzI924wI3MG02qu8jGvbBGXri0p2JGNYWc0a9jGqXidS/82O/twye1LXrXGJQ==",
+      "path": "usync.community.contrib/15.1.0",
+      "hashPath": "usync.community.contrib.15.1.0.nupkg.sha512"
+    },
+    "uSync.Core/15.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-V324kParl/PqoTxMQ84E6yfjZB8elhVeUkAUrmP4mp7AIxzBj1RpgIEYEjRWbBvgXhWaqtQDzHFZnIRBegFW9A==",
+      "path": "usync.core/15.1.0",
+      "hashPath": "usync.core.15.1.0.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Antiforgery/9.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
@@ -7968,7 +8189,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Authorization/9.0.0.0": {
+    "Microsoft.AspNetCore.Authorization.Reference/9.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -7983,7 +8204,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Components/9.0.0.0": {
+    "Microsoft.AspNetCore.Components.Reference/9.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -7993,7 +8214,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Components.Forms/9.0.0.0": {
+    "Microsoft.AspNetCore.Components.Forms.Reference/9.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -8003,7 +8224,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Components.Web/9.0.0.0": {
+    "Microsoft.AspNetCore.Components.Web.Reference/9.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -8158,7 +8379,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Metadata/9.0.0.0": {
+    "Microsoft.AspNetCore.Metadata.Reference/9.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -8603,7 +8824,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.JSInterop/9.0.0.0": {
+    "Microsoft.JSInterop.Reference/9.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

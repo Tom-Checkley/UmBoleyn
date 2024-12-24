@@ -567,3 +567,9 @@ D:\Sites\UmBoleyn\Website\obj\Debug\net9.0\ref\Website.dll
 D:\Sites\UmBoleyn\Website\bin\Debug\net9.0\appsettings-schema.json
 D:\Sites\UmBoleyn\Website\bin\Debug\net9.0\appsettings-schema.Umbraco.Cms.json
 D:\Sites\UmBoleyn\Website\bin\Debug\net9.0\umbraco-package-schema.json
+D:\Sites\UmBoleyn\Website\bin\Debug\net9.0\uSync.dll
+D:\Sites\UmBoleyn\Website\bin\Debug\net9.0\uSync.BackOffice.dll
+D:\Sites\UmBoleyn\Website\bin\Debug\net9.0\uSync.Backoffice.Management.Api.dll
+D:\Sites\UmBoleyn\Website\bin\Debug\net9.0\uSync.Backoffice.Management.Client.dll
+D:\Sites\UmBoleyn\Website\bin\Debug\net9.0\uSync.Community.Contrib.dll
+D:\Sites\UmBoleyn\Website\bin\Debug\net9.0\uSync.Core.dll
